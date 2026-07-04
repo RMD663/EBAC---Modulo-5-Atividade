@@ -2,33 +2,13 @@ using System;
 using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : BaseEnemy
 {
-
-    [SerializeField]
-    EnemyData data;
-
-    private int _health;
-
     void Awake()
     {
-        SetupData();
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void SetupData()
-    {
-        this._health = data.health;
+        this.SetupStats();
+        print("Enemy Data: \n");
+        print("Health: " + this._health);
+        print("Power: " + this._power);
     }
 }

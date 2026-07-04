@@ -7,6 +7,14 @@ public class EnemyRun : BaseEnemy
 
     private float _speed = 0f;
 
+    void Awake()
+    {
+        SetupStats();
+        print("Enemy Run Data: \n");
+        print("Health: " + this._health);
+        print("Power: " + this._power);
+        print("Speed: " + this._speed);
+    }
 
     void FixedUpdate()
     {
