@@ -9,7 +9,7 @@ public class BaseEnemy : MonoBehaviour
     protected int _health;
     protected float _power;
 
-    void Awake()
+    protected virtual void Awake()
     {
         this.SetupStats();
     }

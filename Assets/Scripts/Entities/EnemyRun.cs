@@ -7,9 +7,10 @@ public class EnemyRun : BaseEnemy
 
     private float _speed = 0f;
 
-    void Awake()
+    protected override void Awake()
     {
-        SetupStats();
+        base.Awake();
+        
         print("Enemy Run Data: \n");
         print("Health: " + this._health);
         print("Power: " + this._power);

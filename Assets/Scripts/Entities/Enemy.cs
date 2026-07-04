@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : BaseEnemy
 {
-    void Awake()
+    protected override void Awake()
     {
-        this.SetupStats();
+        base.Awake();
+        
         print("Enemy Data: \n");
         print("Health: " + this._health);
         print("Power: " + this._power);
